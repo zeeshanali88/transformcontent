@@ -37,7 +37,7 @@ export const onMove = (content, pos, distance) => {
         let posIndex = Number(pos) + Number(distance);
         if(posIndex && Math.abs(posIndex) >= content.length) {
             let ratio = Math.abs((posIndex/(content.length-1)));
-            posIndex = ((Math.round((ratio - Math.floor(ratio))) * (content.length-1)));
+            posIndex = ((Math.round((ratio - Math.floor(ratio)) * (content.length-1))));
             if(distance < 0) {
                 posIndex = - posIndex + content.length;
             }
